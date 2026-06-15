@@ -1,48 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>ClockTab Clone</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    /* Reset and full screen layout */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    html, body {
-      height: 100%;
-      background-color: #000;
-      color: #00FFAA;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .clock {
-      font-size: 10vw;
-      text-shadow: 0 0 20px #00FFAA;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centered Hello World</title>
+    <style>
+        body {
+            /* Flexbox to center the content vertically and horizontally */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+        }
+        .container {
+            text-align: center;
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 1.2rem;
+            color: #555;
+            margin: 5px 0;
+        }
+    </style>
 </head>
 <body>
-  <div class="clock" id="clock">--:--:--</div>
 
-  <script>
-    function updateClock() {
-      const now = new Date();
-      const hours = String(now.getHours()).padStart(2, '0');
-      const minutes = String(now.getMinutes()).padStart(2, '0');
-      const seconds = String(now.getSeconds()).padStart(2, '0');
-      document.getElementById('clock').textContent = `${hours}:${minutes}:${seconds}`;
-    }
+    <div class="container">
+        <!-- The Title -->
+        <h1>My Hello World Page</h1>
+        
+        <!-- 10 Lines of Hello World -->
+        <p>Hello World</p>
+        <p>Hello World</p>
+        <p>Hello World</p>
+        <p>Hello World</p>
+        <p>Hello World</p>
+        <p>Hello World</p>
+        <p>Hello World</p>
+        <p>Hello World</p>
+        <p>Hello World</p>
+        <p>Hello World</p>
+    </div>
 
-    // Initial call and update every second
-    updateClock();
-    setInterval(updateClock, 1000);
-  </script>
 </body>
 </html>
