@@ -1,52 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Centered Hello World</title>
-    <style>
-        body {
-            /* Flexbox to center the content vertically and horizontally */
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f9;
-        }
-        .container {
-            text-align: center;
-        }
-        h1 {
-            color: #333;
-            margin-bottom: 20px;
-        }
-        p {
-            font-size: 1.2rem;
-            color: #555;
-            margin: 5px 0;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hello World × 10</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    h1 {
+      color: #e94560;
+      font-size: 2.5rem;
+      margin-bottom: 2rem;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      text-shadow: 0 0 20px rgba(233, 69, 96, 0.5);
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .line {
+      color: #a8dadc;
+      font-size: 1.4rem;
+      font-weight: 500;
+      letter-spacing: 2px;
+      padding: 0.4rem 2rem;
+      border-left: 3px solid #e94560;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 0 8px 8px 0;
+      width: 280px;
+      text-align: center;
+      opacity: 0;
+      transform: translateX(-30px);
+      animation: slideIn 0.4s ease forwards;
+    }
+
+    /* Staggered animation for each line */
+    .line:nth-child(1)  { animation-delay: 0.1s; }
+    .line:nth-child(2)  { animation-delay: 0.2s; }
+    .line:nth-child(3)  { animation-delay: 0.3s; }
+    .line:nth-child(4)  { animation-delay: 0.4s; }
+    .line:nth-child(5)  { animation-delay: 0.5s; }
+    .line:nth-child(6)  { animation-delay: 0.6s; }
+    .line:nth-child(7)  { animation-delay: 0.7s; }
+    .line:nth-child(8)  { animation-delay: 0.8s; }
+    .line:nth-child(9)  { animation-delay: 0.9s; }
+    .line:nth-child(10) { animation-delay: 1.0s; }
+
+    @keyframes slideIn {
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+  </style>
 </head>
 <body>
 
-    <div class="container">
-        <!-- The Title -->
-        <h1>My Hello World Page</h1>
-        
-        <!-- 10 Lines of Hello World -->
-        <p>Hello World</p>
-        <p>Hello World</p>
-        <p>Hello World</p>
-        <p>Hello World</p>
-        <p>Hello World</p>
-        <p>Hello World</p>
-        <p>Hello World</p>
-        <p>Hello World</p>
-        <p>Hello World</p>
-        <p>Hello World</p>
-    </div>
+  <h1>Hello World</h1>
+
+  <div class="container">
+    <div class="line">Hello, World! 🌍</div>
+    <div class="line">Hello, World! 🌍</div>
+    <div class="line">Hello, World! 🌍</div>
+    <div class="line">Hello, World! 🌍</div>
+    <div class="line">Hello, World! 🌍</div>
+    <div class="line">Hello, World! 🌍</div>
+    <div class="line">Hello, World! 🌍</div>
+    <div class="line">Hello, World! 🌍</div>
+    <div class="line">Hello, World! 🌍</div>
+    <div class="line">Hello, World! 🌍</div>
+  </div>
 
 </body>
 </html>
